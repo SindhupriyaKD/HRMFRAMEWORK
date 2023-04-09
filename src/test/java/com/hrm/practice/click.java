@@ -27,6 +27,10 @@ public class click {
 		JavaUtility jLib= new JavaUtility();
 		WebDriverUtility webLib=new WebDriverUtility();
 		DatabaseUtility dLib= new DatabaseUtility();
+		
+		
+		
+		
 	
 	String browserNmae = "chrome";
 	if(browserNmae.equals(fLib.readCommonData("browser"))) {
