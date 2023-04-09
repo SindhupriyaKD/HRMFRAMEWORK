@@ -1,7 +1,8 @@
 package com.GenericUtility;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Properties;
 
 public class FileUtility {
@@ -20,6 +21,16 @@ public class FileUtility {
 		String value = pobj.getProperty(key);
 		return value;
 
+	}
+	
+	public void writeCommonData(String key, String value) throws IOException
+	{
+		FileInputStream fis= new FileInputStream(IPathConstants.PropertyFilePath);
+		Properties pobj= new Properties();
+		pobj.load(fis);
+		pobj.setProperty(key, value);
+		FileWriter writer= new FileWriter(IPathConstants.PropertyFilePath);
+		pobj.store(writer, value);
 	}
 	
 

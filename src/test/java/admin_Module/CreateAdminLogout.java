@@ -1,5 +1,6 @@
 package admin_Module;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.HashMap;
@@ -56,6 +57,7 @@ public class CreateAdminLogout extends BaseClass {
 		assertTrue(actTitle.equals(ElIb.readExpDataFromExcel("ExpData", "ExpTitle")),
 				"Login page is not displayed and verified upon the title");
 		Reporter.log("Login page is displayed and verified upon the title", true);
+		
 
 		// Login Page
 		lp.SignInToAppUsingHrHead();
